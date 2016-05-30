@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>msg Insurance Suite Help</title>
+    <link rel="shortcut icon" href="favicon.ico?1"/>
+    <link href="../../app/app.css" rel="stylesheet">
+    <style type="text/css">
+        /*
+        *  COMMON
+        */
+        div.spec {
+            white-space: pre-wrap;
+            width: 100%;
+        }
+
+        div.head1 {
+            color: #ffffff;
+            position: absolute;
+            top: 8px;
+            left: 25px;
+            font-size: 12pt;
+            font-weight: bold;
+            width: 700px;
+            height: 20px;
+        }
+
+        div.head2 {
+            color: #ffffff;
+            position: absolute;
+            top: 11px;
+            right: 25px;
+            font-size: 9pt;
+            padding-left: 8px;
+            margin-left: 6px;
+            height: 20px;
+            width: 100px;
+        }
+
+        div.spec h1 {
+            color: #004994 !important;
+            padding-top: 10px;
+            padding-bottom: 0;
+            margin-bottom: 4px;
+            font-size: 18pt;
+        }
+
+        div.spec h2 {
+            color: #004994 !important;
+            padding-top: 10px;
+            padding-bottom: 0;
+            margin-bottom: 4px;
+            font-size: 16pt;
+        }
+
+        div.spec h3 {
+            color: #004994 !important;
+            padding-top: 10px;
+            padding-bottom: 0;
+            margin-bottom: 4px;
+            font-size: 14pt;
+        }
+
+        div.spec h4 {
+            color: #004994 !important;
+            padding-top: 10px;
+            padding-bottom: 0;
+            margin-bottom: 4px;
+            font-size: 12pt;
+        }
+
+        div a, div a:hover, div a:visited {
+            color: #004994 !important;
+            cursor: pointer;
+        }
+
+        div.spec img {
+            max-width: 100%;
+            display: block;
+            margin-right: auto;
+        }
+
+        div.spec > ul {
+        }
+
+        div.spec > ul > li {
+            list-style-type: disc;
+        }
+
+        div > ol {
+            color: #004994 !important;
+            list-style-type: none;
+            padding: 0 0 0 20px !important;
+            white-space: normal;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        /*
+         *  HTML
+         */
+        @media screen {
+            body {
+                background-color: #808080;
+                color: #000000;
+                font-family: "Arial", sans-serif;
+                font-size: 10pt;
+                overflow: hidden;
+            }
+
+            div.frontpage, div.rearpage {
+                display: none;
+            }
+
+            div.page {
+                -webkit-box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.5);
+                box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.5);
+                width: 970px;
+                position: absolute;
+                left: 20px;
+                top: 0;
+                height: 100%;
+            }
+
+            div.head {
+                position: fixed;
+                z-index: 100;
+                left: 20px;
+                top: 0;
+                width: 970px;
+                height: 36px;
+                background-color: #4E799B;
+            }
+
+            div.head1:after {
+                content: "msg Insurance Suite - online help";
+            }
+
+            div.spec h1 {
+                margin: 0 0 -20px 0;
+            }
+
+            div.spec h2 {
+                margin: 0 0 -20px 0;
+            }
+
+            div.spec h3 {
+                margin: 0 0 -20px 0;
+            }
+
+            div.spec h4 {
+                margin: 0;
+            }
+
+            div.spec {
+                background-color: #ffffff;
+                padding: 0 30px 0 270px;
+                position: absolute;
+                margin-top: 36px;
+                overflow-x: hidden;
+                overflow-y: auto;
+                height: calc(100% - 51px);
+            }
+
+            div > ol {
+                position: fixed;
+                width: 250px;
+                left: 20px;
+                top: 36px;
+                height: calc(100% - 51px);
+                overflow-x: hidden;
+                overflow-y: auto;
+            }
+
+            div.spec > ol > li {
+                margin: 10px 0 10px 0;
+            }
+
+            div.spec > ol > li ul {
+                padding: 0 0 0 10px;
+                list-style-type: none;
+            }
+
+            div.spec > ol > li ul > li {
+                padding: 5px 0 0 0;
+            }
+
+            div.spec > ul {
+                margin-top: -20px;
+                margin-bottom: -20px;
+            }
+
+            div.spec > ul > li {
+                margin-top: -10px;
+            }
+
+            div.spec > ul > li > ul {
+                margin-bottom: -30px;
+            }
+
+            div.spec > ul > li > ul > li {
+                margin-top: -10px;
+            }
+
+            p {
+                -webkit-margin-before: -5px;
+                -webkit-margin-after: 0;
+                margin: -5px 0 0 0;
+            }
+
+            div.appFooter {
+                left: 20px;
+                bottom: 0;
+                width: 970px;
+                min-width: 970px;
+                height: 15px;
+                position: fixed;
+                background: #4E799B;
+            }
+
+            div.appPrintHeader,
+            div.appPrintFooter {
+                display: none;
+            }
+
+        }
+
+        /*
+         *  PDF
+         */
+        @media print {
+            @page {
+                size: A4;
+                margin-left: 2.00cm;
+                margin-right: 1.50cm;
+                margin-top: 3.25cm;
+                margin-bottom: 2.00cm;
+                padding-top: 0.50cm;
+                padding-bottom: 0.00cm;
+                font-family: "Arial", sans-serif;
+                @top-center {
+                    content: flow(header);
+                    border-bottom: 1px solid #555;
+                }
+
+                @bottom-center {
+                    content: flow(footer);
+                }
+
+            }
+
+            @page frontpage {
+                margin-left: 0cm;
+                margin-right: 0cm;
+                margin-top: 0cm;
+                margin-bottom: 0cm;
+                padding-top: 0cm;
+                padding-bottom: 0cm;
+            }
+
+            @page rearpage {
+                margin-left: 0cm;
+                margin-right: 0cm;
+                margin-top: 0cm;
+                margin-bottom: 0cm;
+                padding-top: 0cm;
+                padding-bottom: 0cm;
+            }
+
+            body {
+                margin: 0;
+                padding: 0;
+                font-family: "Arial", sans-serif;
+                font-size: 9pt;
+                position: relative;
+            }
+
+            .break {
+                page-break-before: always;
+            }
+
+            div.frontpage, div.rearpage {
+                width: 21cm !important;
+                height: 29.7cm !important;
+            }
+
+            div.frontpage .frontline1 {
+                position: absolute;
+                color: #841439 !important;
+                font-size: 32px;
+                font-weight: bold;
+                left: 2cm;
+                top: 19cm;
+                white-space: normal;
+                width: 18cm;
+                line-height: 36px;
+            }
+
+            div.frontpage .frontline2 {
+                position: absolute;
+                color: black !important;
+                font-size: 20px;
+                font-weight: bold;
+                left: 2cm;
+                top: 20cm;
+            }
+
+            div.frontpage .frontline3 {
+                position: absolute;
+                color: black !important;
+                font-size: 20px;
+                left: 2cm;
+                top: 21cm;
+            }
+
+            div.rearpage .rearline1 {
+                position: absolute;
+                color: black !important;
+                font-size: 14px;
+                left: 2cm;
+                top: 19cm;
+                white-space: normal;
+                width: 18cm;
+                line-height: 20px;
+            }
+
+            div.rearpage .rearline2 {
+                position: absolute;
+                color: black !important;
+                font-size: 14px;
+                left: 2cm;
+                top: 20cm;
+                white-space: normal;
+                width: 18cm;
+                line-height: 20px;
+            }
+
+            div.frontpage {
+                background: url('./img/01_ET_Frontpage.png') no-repeat 0 0 !important;
+                background-size: contain !important;
+                page: frontpage;
+            }
+
+            div.rearpage {
+                background: url('./img/01_ET_Rearpage.png') no-repeat 0 0 !important;
+                background-size: contain !important;
+                page: rearpage;
+            }
+
+            h1 {
+                prince-bookmark-level: 1;
+            }
+
+            h2 {
+                prince-bookmark-level: 2;
+            }
+
+            h3 {
+                prince-bookmark-level: 3;
+            }
+
+            div.head {
+                display: none;
+            }
+
+            div > ol a[href]::after {
+                color: black !important;
+                content: leader(".") target-counter(attr(href), page);
+            }
+
+            div.spec > ol a,
+            div.spec > ol strong {
+                color: #004994 !important
+            }
+
+            div.spec > ol,
+            div.spec > ol ul {
+                margin-left: 1cm;
+            }
+
+            div.spec > ol li {
+                list-style-type: none;
+            }
+
+            div.spec h1 {
+                margin: 0 0 -10px 0;
+            }
+
+            div.spec h2 {
+                margin: 0 0 -10px 0;
+            }
+
+            div.spec h3 {
+                margin: 0 0 -10px 0;
+            }
+
+            div.spec h4 {
+                margin: 0;
+            }
+
+            div.appFooter {
+                display: none;
+            }
+
+            div.appPrintHeader {
+                flow: static(header);
+                font-size: 9pt;
+            }
+
+            div.appPrintHeader .appLeft {
+                width: 3.5cm;
+                text-align: left;
+                position: absolute;
+                left: 0;
+                top: -2.5cm;
+            }
+
+            div.appPrintHeader .appCenter {
+                width: 9.5cm;
+                text-align: center;
+                white-space: normal;
+                position: absolute;
+                left: 3.5cm;
+                top: -2.5cm;
+            }
+
+            div.appPrintHeader .appRight {
+                width: 4.5cm;
+                height: 1.5cm;
+                text-align: right;
+                content: "";
+                position: absolute;
+                right: 0;
+                top: -2.5cm;
+            }
+
+            div.appPrintFooter {
+                flow: static(footer);
+                font-size: 9pt;
+            }
+
+            div.appPrintFooter .appLeft {
+                width: 5.0cm;
+                text-align: left;
+                position: absolute;
+                left: 0;
+            }
+
+            div.appPrintFooter .appCenter {
+                width: 9cm;
+                text-align: center;
+                white-space: normal;
+                position: absolute;
+                left: 3.5cm;
+            }
+
+            div.appPrintFooter .appRight {
+                width: 3.5cm;
+                text-align: right;
+                content: counter(page);
+                position: absolute;
+                right: 0;
+            }
+
+            div.page {
+                width: 17cm;
+                overflow: hidden;
+            }
+
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="frontpage appImpressum">
+    <div class="frontline1 appName"></div>
+    <div class="frontline2">Program information, help and functional reference</div>
+    <div class="frontline3 appCurrentVersion"> / Effective <span class="appDate"></span></div>
+</div>
+<div class="page">
+    <!-- Footer must be on top of the page since it is taken out of flow from princeXML and then inserted into every page footer -->
+    <div class="appPrintHeader">
+        <div class="appLeft appName">&nbsp;</div>
+        <div class="appCenter">Program information, help and functional reference</div>
+        <div class="appRight"></div>
+    </div>
+    <div class="appPrintFooter">
+        <div class="appLeft">Effective: <span class="appDate"></span></div>
+        <div class="appCenter"></div>
+        <div class="appRight"></div>
+    </div>
+    <div id="head" class="head appImpressum">
+        <div id="head1" class="head1"></div>
+        <div id="head2" class="head2 appCurrentVersion"></div>
+    </div>
+    <div class="spec">
+        <%=content%>
+    </div>
+    <div class="appFooter">
+    </div>
+</div>
+<div class="rearpage">
+    <div class="rearline1">
+        msg systems ag, msg life, innovas
+    </div>
+    <div class="rearline2">
+        Robert-Bürkle-Str. 1<br/>
+        85737 Ismaning<br/>
+        Telefon 089 96 101 0<br/>
+        Telefax 089 96 101 2333<br/>
+        www.msg-systems.com
+    </div>
+</div>
+
+</body>
+</html>
