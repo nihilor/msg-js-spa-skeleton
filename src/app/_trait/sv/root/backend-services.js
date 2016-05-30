@@ -10,7 +10,7 @@ ___config.package___.backendservices = cs.trait({
     protos: {
 
         prepare () {
-            this.base();
+            this.base()
             // Todo: delete the examples, the examples are there to help you write services, but maybe you need other services,
             // so delete the existing ones and write your own
 
@@ -30,33 +30,33 @@ ___config.package___.backendservices = cs.trait({
                         callback(this.SUCCESS, objs);
                     }
                 }
-            });
+            })
 
             // EXAMPLE - GET - READ
-            this.registerService("GET", "readProjects", function (callback) {
-                return {serviceURL: sprintf(this.projectCRService, this.serviceRoot), callback: callback};
-            });
+            this.registerService("GET", "readProjects", callback => {
+                return {serviceURL: sprintf(this.projectCRService, this.serviceRoot), callback: callback}
+            })
 
             // EXAMPLE - POST - CREATE
-            this.registerService("POST", "createProject", function (project, callback) {
+            this.registerService("POST", "createProject", (project, callback) => {
                 return {
                     data: project, options: {dataType: 'json'},
                     serviceURL: sprintf(this.projectCRService, this.serviceRoot), callback: callback
-                };
-            });
+                }
+            })
 
             // EXAMPLE - PUT - UPDATE
-            this.registerService("PUT", "updateProject", function (project, callback) {
+            this.registerService("PUT", "updateProject", (project, callback) => {
                 return {
                     data: project, options: {dataType: 'json'},
                     serviceURL: sprintf(this.projectRUDService, this.serviceRoot, project.id), callback: callback
-                };
-            });
+                }
+            })
 
             // EXAMPLE - DELETE - DELETE
-            this.registerService("DELETE", "deleteProject", function (project, callback) {
+            this.registerService("DELETE", "deleteProject", (project, callback) => {
                 return {serviceURL: sprintf(this.projectRUDService, this.serviceRoot, project.id), callback: callback};
-            });
+            })
         }
     }
 });
