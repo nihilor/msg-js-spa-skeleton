@@ -63,7 +63,7 @@ module.exports = function (grunt) {
                     "tmp/stage2/app/sv.js",
                     "tmp/stage2/app/data/**/*.js",
                     "tmp/stage2/app/dataObjects/**/*.js"],
-                dest: "www/app/boot.js",
+                dest: "www/app/appboot.js",
                 options: {}
             },
             "app-core": {
@@ -165,8 +165,8 @@ module.exports = function (grunt) {
         },
         concat: {
             "app-boot": {
-                src: ["copyright.txt", "www/app/boot.js"],
-                dest: "www/app/boot.js"
+                src: ["copyright.txt", "www/app/appboot.js"],
+                dest: "www/app/appboot.js"
             },
             "app-core": {
                 src: ["copyright.txt", "www/app/app.js"],
@@ -251,8 +251,8 @@ module.exports = function (grunt) {
         }
     });
 
-    grunt.registerTask("app-code", ["placeholder:app", "jshint:app", "babel:app", "uglify:app-boot", "uglify:app-core", "concat:app-boot", "concat:app-core", "replace:app-sourcemap"]);
-    grunt.registerTask("appDev-code", ["placeholder:app", "jshint:app", "babel:app", "uglify:app-boot", "replace:app-sourcemap"]);
+    grunt.registerTask("app-code", ["placeholder:app", "jshint:app", "babel:app", "uglify", "concat:app-boot", "concat:app-core", "replace:app-sourcemap"]);
+    grunt.registerTask("appDev-code", ["placeholder:app", "jshint:app", "babel:app", "replace:app-sourcemap"]);
     grunt.registerTask("app-i18n", ["placeholder:i18n", "merge-json:i18n-de", "merge-json:i18n-en"]);
     grunt.registerTask("app-style", ["placeholder:less", "replace:stage1-less", "less:app", "concat:app-css", "replace:app-css"]);
     grunt.registerTask("app-markup", ["placeholder:html", "concat:app-markup"]);

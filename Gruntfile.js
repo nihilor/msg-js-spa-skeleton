@@ -14,6 +14,6 @@ module.exports = function (grunt) {
     grunt.registerTask("dev", ["clean:clean", "buildDev", "includeSource", "serverDev"]);
     grunt.registerTask("buildDev", ["libDev", "appDev", "copy"]);
     grunt.registerTask("prod", ["clean:clean", "build", "server"]);
-    grunt.registerTask("build", ["lib", "app", "copy"]);
+    grunt.registerTask("build", ["lib", "app", "copy:app-static", "copy:app-assets"]);
 
 };
