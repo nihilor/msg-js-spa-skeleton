@@ -73,6 +73,7 @@
     },
     "scripts": {
         "prepublish":  "npm run upd",
+        "start":       "grunt",
         "upd":         "upd -n"
     }
 }

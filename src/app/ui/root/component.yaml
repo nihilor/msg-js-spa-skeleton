@@ -8,7 +8,7 @@ interface:
   api:
     call:
       whoAmI:
-        desc: "Serviceaufruf um den aktuell angemeldeten Benutzer anzufragen."
+        desc: "Serviceaufruf, um den aktuell angemeldeten Benutzer anzufragen."
         part: "service"
   model:
     define:
@@ -16,18 +16,18 @@ interface:
         data:
           currentUser:
             desc: "Der aktuell angemeldete Benutzer wird hier zur Verfügung gestellt. Viele Komponenten benötigen Daten
-                   des aktuellen Nutzers und können über einen entsprechenden observer Zugriff erlangen."
-            param: "Object - in der Regel das Entitätsobject der Klasse 'User' welches den aktuellen Benutzer beschreibt."
+                   des aktuellen Nutzers und können über einen entsprechenden Oserver Zugriff erlangen."
+            param: "Object - in der Regel das Entitätsobjekt der Klasse 'User', welches den aktuellen Benutzer beschreibt."
     observe:
       global:
         data:
           currentUser:
             part: "Controller"
-            desc: "Sollte sich der aktuelle Benutzer ändern werden alle benutzerabhängigen Objekte synchron im Anschluss geladen.
-                   Sofern der Benutzer sich erneut geändert hätte, wird die Anwendung beendet um Komplikationen durch unterschiediche
-                   Berechtigungen und bereits geladenen Daten des alten Nutzers zu vermeiden. Theoretisch kann ein Relogin als anderer
+            desc: "Sollte sich der aktuelle Benutzer ändern, werden alle benutzerabhängigen Objekte synchron im Anschluss geladen.
+                   Sofern der Benutzer sich erneut geändert hätte, wird die Anwendung beendet, um Komplikationen durch unterschiediche
+                   Berechtigungen und bereits geladene Daten des vorherigen Benutzers zu vermeiden. Theoretisch kann ein Relogin als anderer
                    Benutzer nicht vorkommen."
-            param: "Object - in der Regel das Entitätsobject der Klasse 'User' welches den aktuellen Benutzer beschreibt."
+            param: "Object - in der Regel das Entitätsobjekt der Klasse 'User', welches den aktuellen Benutzer beschreibt."
   ui:
     socket:
       default:
