@@ -12,6 +12,12 @@ app.HashManager = (function () {
 
     var api = {};
 
+    var HashManager = function (url) {
+        this.url = url;
+        this.hashes = [];
+        this.parseURL();
+    };
+
     api.parseURL = function (url) {
         return new HashManager(url);
     };
@@ -20,12 +26,6 @@ app.HashManager = (function () {
         return _.findIndex(hashes, function (hash) {
             return hash.indexOf(key + "=") === 0 || hash === key;
         });
-    };
-
-    var HashManager = function (url) {
-        this.url = url;
-        this.hashes = [];
-        this.parseURL();
     };
 
     HashManager.prototype.parseURL = function () {

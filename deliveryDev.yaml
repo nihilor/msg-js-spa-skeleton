@@ -7,3 +7,6 @@ import:
 - msg-js-spa-framework
 - msg-js-spa-widgets
 - delivery/**/*.yaml
+build:
+- "!spa-fw.componentjs.jquery"
+- "!spa-fw.handlebars"

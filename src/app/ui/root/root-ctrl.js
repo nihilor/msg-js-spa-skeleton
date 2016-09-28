@@ -37,7 +37,7 @@ ___config.package___.ctrl = cs.clazz({
         prepare () {
             this.base()
 
-            this.observeParentModel('global:data:currentUser', (ev, currentUser) => {
+            this.observeOwnModel('global:data:currentUser', (ev, currentUser) => {
                 const user = this.model.value('global:data:currentUser')
                 if (user && user !== currentUser) {
                     // Es ist bereits ein Benutzer angemeldet gewesen.
